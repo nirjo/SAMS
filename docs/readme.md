@@ -1,12 +1,11 @@
 <p align="center">
   <a href="http://www.pondiuni.edu.in/" title="SAMS & RAMS">
-    <img src="_media\Full_Logo.jpg" alt="Pondicherry university Logo" width="350" />
+    <img src="_media\PUICON.png" alt="Pondicherry university Logo" width="200" />
   </a>
 </p>
 
 <h3 align="center" style="margin-top: .6rem">
 
-</small>
  PUSAMS <small>-Students’ Academic Activity Management System </small>
 </h3>
 

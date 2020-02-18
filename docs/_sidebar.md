@@ -1,5 +1,4 @@
 - Getting Started
-- [Coverpage](cover.md)
   - [Overview](readme.md)
   - [Quick Start](quick-start.md)
   - [Workflow](workflow.md)
