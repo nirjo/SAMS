@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://www.pondiuni.edu.in/" title="SAMS & RAMS">
-    <img src="_media\PUICON.png" alt="Pondicherry university Logo" width="200" />
+    <img src="_media\images.png" alt="Pondicherry university Logo" width="200" />
   </a>
 </p>
 
