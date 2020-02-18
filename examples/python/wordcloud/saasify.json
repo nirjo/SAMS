@@ -1,0 +1,78 @@
+{
+  "name": "wordcloud",
+  "description": "Generate stylish wordclouds from any webpage.",
+  "alias": "wordcloud",
+  "services": [
+    {
+      "src": "main.py",
+      "immutable": true,
+      "examples": [
+        {
+          "name": "US Constitution",
+          "input": {
+            "url": "https://www.constituteproject.org/constitution/United_States_of_America_1992",
+            "icon": "fas fa-dove",
+            "palette": "cartocolors.qualitative.Bold_6"
+          }
+        },
+        {
+          "name": "News Article",
+          "description": "Create wordcloud from article",
+          "input": {
+            "url": "https://www.cbc.ca/news/canada/ottawa/snow-storm-remembrance-day-1.5355302",
+            "icon": "fab fa-canadian-maple-leaf",
+            "palette": "colorbrewer.sequential.Reds_6",
+            "gradient": "vertical"
+          }
+        },
+        {
+          "name": "YC",
+          "description": "Generate from blog post",
+          "input": {
+            "url": "https://blog.ycombinator.com/ycs-essential-startup-advice/",
+            "icon": "fab fa-y-combinator",
+            "palette": "cartocolors.qualitative.Pastel_8",
+            "gradient": "horizontal"
+          }
+        }
+      ]
+    }
+  ],
+  "pricingPlans": [
+    {
+      "name": "Free",
+      "rateLimit": {
+        "requestsInterval": 3600,
+        "requestsMaxPerInterval": 15
+      }
+    },
+    {
+      "name": "Unlimited",
+      "amount": 99,
+      "requests": {
+        "amount": 0.5
+      }
+    }
+  ],
+  "env": {
+    "EXTRACT_TOKEN": "@extract_token"
+  },
+  "saas": {
+    "name": "WordCloud",
+    "heading": "**Generate Beautiful Wordclouds**",
+    "subheading": "An API to create attractive wordcloud previews from any text or webpage.",
+    "repo": "https://github.com/saasify-sh/saasify/tree/master/examples/python/wordcloud",
+    "logo": "media/logo.svg",
+    "favicon": "media/favicon.ico",
+    "theme": {
+      "name": "waves",
+      "backgroundImage": "https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2550&q=80",
+      "buttonStyle": "standard",
+      "color": "#50A9DA",
+      "wave": false,
+      "gradientDark": false,
+      "codeBlockDark": true,
+      "codeBlockOutputColor": "white"
+    }
+  }
+}

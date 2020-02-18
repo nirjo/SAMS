@@ -1,0 +1,10 @@
+{
+  "name": "hello-world",
+  "alias": "hello-world",
+  "services": [
+    {
+      "src": "index.ts",
+      "immutable": true
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "saasify-utils",
+  "version": "1.15.5",
+  "description": "Shared utilities for Saasify.",
+  "main": "index.js",
+  "author": "Saasify <dev@saasify.sh>",
+  "repository": "saasify-sh/saasify",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "test": "ava -v"
+  },
+  "keywords": [
+    "faas",
+    "saas",
+    "lambda",
+    "serverless",
+    "deploy",
+    "saasify",
+    "fts"
+  ],
+  "devDependencies": {
+    "ava": "^1.2.0"
+  },
+  "dependencies": {
+    "decompress": "^4.2.0",
+    "decompress-unzip": "^4.0.1",
+    "fs-extra": "^8.1.0",
+    "saasify-faas-utils": "^1.15.5",
+    "tempy": "^0.3.0"
+  },
+  "ava": {
+    "snapshotDir": "./.snapshots"
+  },
+  "gitHead": "c7c6721c98e28d0b1ea455c38276eb668c66b1f9"
+}

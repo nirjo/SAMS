@@ -1,0 +1,174 @@
+.section .title {
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section .subtitle {
+  max-width: 500px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.section .content {
+  max-width: 1280px;
+  padding: 3em 2em;
+}
+
+.theme-okta {
+  background: #23303a;
+  color: #fff;
+}
+
+.light {
+  color: #222;
+}
+
+.theme-okta h1,
+.theme-okta h2,
+.theme-okta h3,
+.theme-okta h4,
+.theme-okta h5,
+.theme-okta h6 {
+  color: #fff;
+}
+
+.theme-okta .light h1,
+.theme-okta .light h2,
+.theme-okta .light h3,
+.theme-okta .light h4,
+.theme-okta .light h5,
+.theme-okta .light h6 {
+  color: #222;
+}
+
+.theme-okta footer .content {
+  color: #fff;
+}
+
+.theme-okta footer .header {
+  color: #fff;
+}
+
+.theme-okta footer .link {
+  color: #ccc;
+}
+
+.theme-okta footer .detail {
+  color: #ccc;
+}
+
+.theme-okta header .link,
+.theme-okta header .link:active,
+.theme-okta header .link:visited {
+  color: #fff;
+}
+
+.theme-okta header .link:hover {
+  color: #eb3d48;
+}
+
+.theme-okta a {
+  color: #d23d67;
+}
+
+.theme-okta a:hover {
+  color: #db6485;
+}
+
+.theme-okta a:active {
+  color: #c83a62;
+}
+
+.theme-okta :global(.ant-btn-primary) {
+  background-color: #d23d67;
+  border-color: #d23d67;
+  color: #fff;
+}
+
+.theme-okta :global(.ant-btn-primary:hover) {
+  background-color: #db6485;
+  border-color: #db6485;
+  color: #fff;
+}
+
+.theme-okta :global(.ant-btn-primary:active) {
+  background-color: #c83a62;
+  border-color: #c83a62;
+  color: #fff;
+}
+
+.theme-okta :global(.ant-btn-secondary) {
+  background-color: transparent;
+  border-color: #d23d67;
+  color: #fff;
+}
+
+.theme-okta :global(#readme) code {
+  background: #0788cc;
+  color: #fff;
+}
+
+.theme-okta :global(#readme) pre {
+  background: #0788cc !important;
+  color: #fff !important;
+  border: 1px solid #eee;
+}
+
+/* TODO: cta-button ghost should have dark text */
+.cta-button {
+  color: #fff !important;
+}
+
+body header + section:first-of-type .title {
+  margin: 0 0 64px;
+
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 64px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 767px) {
+  body header + section:first-of-type .title {
+    font-size: 40px;
+    line-height: 1.33;
+    margin-bottom: 24px;
+  }
+
+  .content {
+    padding: 3em 0.5em;
+  }
+
+  body header + section:first-of-type {
+    min-height: 80vh;
+  }
+}
+
+.theme-okta .live-service-demo .output__cta__message {
+  color: black;
+}
+
+.theme-okta .live-service-demo .footer__service__name {
+  color: #de7443;
+}
+
+.theme-okta .docs-page header {
+  background: #23303a !important;
+}
+
+/* 
+  TODO: we should only have one logo and the Logo component should decide which to show based on light / dark context.
+  This approach of having multiple logos and showing / hiding them is extremely brittle.
+*/
+.theme-okta .logo.logo--light {
+  display: flex;
+}
+
+.theme-okta .logo:not(.logo--light) {
+  display: none;
+}
+
+.theme-okta footer .logo(.logo--light) {
+  display: flex;
+}

@@ -1,0 +1,201 @@
+.container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  padding: 6px 12px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.content-body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.attached {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.primary {
+  align-items: center;
+  display: flex;
+}
+
+.logo-image {
+  margin-right: 24px;
+  height: 48px;
+}
+
+.logo {
+  align-self: center;
+  display: flex;
+  transition: all 400ms ease;
+  height: 100%;
+  width: auto;
+}
+
+.logo--light {
+  display: none;
+}
+
+.logo-text {
+  font-size: 22px;
+  margin-right: 32px;
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  user-select: none;
+}
+
+.link {
+  align-items: center;
+  display: flex;
+  padding: 8px 16px;
+
+  font-size: 1.05em;
+}
+
+.container {
+  padding: 16px 24px;
+}
+
+.menuWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.menuWrapper > a {
+  padding: 8px 16px;
+  font-size: 1em;
+  margin-left: 2em;
+}
+
+.links {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.link {
+  padding: 0;
+  margin-right: 32px;
+}
+
+.link:hover {
+  transition: color 100ms ease;
+}
+
+.actions {
+  display: flex;
+  margin-left: auto;
+}
+
+.actions .link {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.actions .link:first-of-type {
+  margin-left: 0;
+}
+
+.actions .link:last-of-type {
+  margin-right: 0;
+}
+
+.burger {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .links {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
+  .link {
+    padding: 0;
+    margin-left: 0.2em;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .actions {
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  .actions .link {
+    width: 100%;
+  }
+
+  .actions .link:first-of-type {
+    margin-left: 0px;
+  }
+
+  .actions .link button {
+    width: 100%;
+  }
+
+  .container {
+    padding: 12px;
+  }
+
+  .content {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .content-body {
+    display: none;
+  }
+
+  .expanded .content-body {
+    display: flex;
+  }
+
+  .logo,
+  .logo-text,
+  .burger {
+    margin-bottom: 0px;
+  }
+
+  .primary {
+    width: 100%;
+  }
+
+  .primary .link {
+    margin-bottom: 0;
+  }
+
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .logo-image {
+    margin-right: 12px;
+  }
+}

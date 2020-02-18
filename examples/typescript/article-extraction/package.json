@@ -1,0 +1,17 @@
+{
+  "name": "article-extraction",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cleanly pull content from any website.",
+  "author": "Saasify <dev@saasify.sh>",
+  "license": "MIT",
+  "repository": "saasify-sh/saasify",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "fts-http": "^1.2.1",
+    "lodash.pick": "^4.4.0",
+    "scrapex": "^0.2.0"
+  }
+}

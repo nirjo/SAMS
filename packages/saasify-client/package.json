@@ -1,0 +1,28 @@
+{
+  "name": "saasify-client",
+  "version": "1.15.11",
+  "description": "Universal HTTP client for Saasify.",
+  "main": "index.js",
+  "author": "Saasify <dev@saasify.sh>",
+  "repository": "saasify-sh/saasify",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "faas",
+    "saas",
+    "lambda",
+    "serverless",
+    "deploy",
+    "saasify",
+    "fts"
+  ],
+  "dependencies": {
+    "axios": "^0.19.0",
+    "is-buffer": "^2.0.3",
+    "is-stream": "^2.0.0",
+    "qs": "^6.6.0"
+  },
+  "gitHead": "c7c6721c98e28d0b1ea455c38276eb668c66b1f9"
+}

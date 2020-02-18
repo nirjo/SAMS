@@ -1,0 +1,35 @@
+.how-it-works {
+  max-width: 900px;
+}
+
+.steps {
+  margin-top: 3em;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 2em;
+}
+
+.step h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+.step div {
+  width: 60%;
+  margin-right: 4em;
+}
+
+.step div:nth-child(even) {
+  margin-right: 0;
+  margin-left: 4em;
+}
+
+.step img {
+  width: 30%;
+}

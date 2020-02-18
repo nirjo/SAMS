@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+fastapi = "*"
+stylecloud = "*"
+requests = "*"
+aiofiles = "*"
+python-dotenv = "*"
+pydantic = "*"
+urllib2 = "*"
+
+[dev-packages]
+uvicorn = "*"
+
+[requires]
+python_version = "3.7"

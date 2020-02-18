@@ -1,0 +1,34 @@
+{
+  "name": "sharp",
+  "alias": "sharp",
+  "services": [
+    {
+      "src": "src/index.ts",
+      "immutable": true,
+      "examples": [
+        {
+          "name": "Resize",
+          "input": {
+            "input": "https://octodex.github.com/images/original.png",
+            "ops": [
+              {
+                "op": "resize",
+                "options": {
+                  "width": 220
+                }
+              },
+              {
+                "op": "webp"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "saas": {
+    "repo": "https://github.com/saasify-sh/saasify/tree/master/examples/typescript/sharp",
+    "logo": "./media/logo.svg",
+    "favicon": "./media/favicon.ico"
+  }
+}

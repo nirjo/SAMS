@@ -1,0 +1,43 @@
+{
+  "name": "color",
+  "description": "Color conversion and manipulation API. 🌈",
+  "alias": "color",
+  "services": [
+    {
+      "src": "index.ts",
+      "immutable": true,
+      "examples": [
+        {
+          "name": "Convert to HSV",
+          "input": {
+            "input": "#f08a5d",
+            "outputType": "hsv"
+          }
+        },
+        {
+          "name": "Convert to HSV",
+          "input": {
+            "input": "#f08a5d",
+            "outputType": "hsv"
+          }
+        }
+      ]
+    }
+  ],
+  "saas": {
+    "heading": "**Color** Conversion and Manipulation",
+    "subheading": "Simple API handling the most common color conversion and manipulation functions.",
+    "repo": "https://github.com/saasify-sh/saasify/tree/master/examples/typescript/color",
+    "logo": "./media/logo.svg",
+    "favicon": "./media/favicon.ico",
+    "theme": {
+      "name": "waves",
+      "backgroundImage": "https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1700&q=80",
+      "buttonStyle": "rounded",
+      "color": "#ff6e6c",
+      "wave": false,
+      "gradientDark": false,
+      "codeBlockDark": true
+    }
+  }
+}

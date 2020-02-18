@@ -1,0 +1,41 @@
+{
+  "name": "meta-stock",
+  "description": "TODO",
+  "alias": "meta-stock",
+  "services": [
+    {
+      "src": "src/search-images.ts",
+      "immutable": true,
+      "examples": [
+        {
+          "name": "Search for images of cats",
+          "input": {
+            "query": "cats"
+          }
+        }
+      ]
+    }
+  ],
+  "env": {
+    "UNSPLASH_ACCESS_KEY": "@unsplash_access_key",
+    "UNSPLASH_SECRET_KEY": "@unsplash_secret_key",
+    "PIXABAY_API_KEY": "@pixabay_api_key"
+  },
+  "saas": {
+    "name": "MetaStock",
+    "heading": "Royalty free stock media search",
+    "subheading": "Meta search engine for the best royalty free stock images, gifs, and videos.",
+    "repo": "https://github.com/saasify-sh/saasify/tree/master/examples/typescript/meta-stock",
+    "logo": "media/logo.svg",
+    "favicon": "media/favicon.png",
+    "theme": {
+      "name": "waves",
+      "backgroundImage": "https://images.unsplash.com/photo-1549916571-9b2c630403dc?ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80",
+      "buttonStyle": "rounded",
+      "color": "#4aaef7",
+      "wave": false,
+      "gradientDark": false,
+      "codeBlockDark": true
+    }
+  }
+}

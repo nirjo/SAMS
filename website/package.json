@@ -1,0 +1,80 @@
+{
+  "name": "saasify-platform",
+  "version": "1.15.12",
+  "private": true,
+  "description": "Saasify marketplace and platform website.",
+  "author": "Saasify <dev@saasify.sh>",
+  "homepage": "https://saasify.sh",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "NODE_PATH=node_modules REACT_APP_SAASIFY_API_BASE_URL=http://localhost:5000 react-app-rewired start",
+    "now-build": "NODE_PATH=node_modules NODE_ENV=production react-app-rewired build",
+    "deploy": "now --prod && now rm --safe saasify-platform",
+    "build": "NODE_PATH=node_modules react-app-rewired build",
+    "test": "eslint src",
+    "test:watch": "NODE_PATH=node_modules react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "keywords": [
+    "saasify",
+    "saas",
+    "faas",
+    "lambda",
+    "serverless",
+    "deploy",
+    "fts",
+    "oss"
+  ],
+  "dependencies": {
+    "antd": "^3.26.6",
+    "copy-text-to-clipboard": "^2.1.1",
+    "docsify": "^4.10.2",
+    "memoize-one": "^5.1.1",
+    "mobx": "^5.15.1",
+    "mobx-react": "^6.1.4",
+    "prop-types": "^15.7.2",
+    "random": "^2.1.1",
+    "react": "^16.10.1",
+    "react-block-image": "^1.0.0",
+    "react-body-classname": "^1.3.0",
+    "react-dom": "^16.10.1",
+    "react-ga": "^2.7.0",
+    "react-helmet": "^5.2.1",
+    "react-hotkeys": "^2.0.0",
+    "react-motion": "^0.5.2",
+    "react-router-dom": "^5.1.2",
+    "react-saasify": "^1.15.12",
+    "react-sizeme": "^2.6.12",
+    "react-svg-morph": "^0.2.1",
+    "react-swipeable": "^5.5.1"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-proposal-decorators": "^7.7.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "babel-plugin-import": "^1.13.0",
+    "compression-webpack-plugin": "^3.0.1",
+    "customize-cra": "^0.5.0",
+    "directory-named-webpack-plugin": "^4.0.1",
+    "dotenv-safe": "^8.2.0",
+    "react-app-rewired": "^2.1.5",
+    "react-scripts": "^3.3.0",
+    "source-map-explorer": "^2.0.1",
+    "webpack": "^4.41.5",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10"
+  },
+  "peerDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}

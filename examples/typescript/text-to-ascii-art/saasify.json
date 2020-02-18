@@ -1,0 +1,113 @@
+{
+  "name": "text-to-ascii-art",
+  "description": "Converts text to ascii art.",
+  "alias": "text-to-ascii-art",
+  "services": [
+    {
+      "src": "index.ts",
+      "immutable": true,
+      "examples": [
+        {
+          "name": "Ghost",
+          "input": {
+            "text": "Boo!",
+            "font": "Ghost"
+          }
+        },
+        {
+          "name": "Big Money-ne",
+          "input": {
+            "text": "Saasify",
+            "font": "Big Money-ne"
+          }
+        },
+        {
+          "name": "ANSI Shadow",
+          "input": {
+            "text": "Saasify",
+            "font": "ANSI Shadow"
+          }
+        },
+        {
+          "name": "Bloody",
+          "input": {
+            "text": "Saasify",
+            "font": "Bloody"
+          }
+        },
+        {
+          "name": "Alligator",
+          "input": {
+            "text": "Saasify",
+            "font": "Alligator"
+          }
+        },
+        {
+          "name": "Alligator2",
+          "input": {
+            "text": "Saasify",
+            "font": "Alligator2"
+          }
+        },
+        {
+          "name": "Banner3-D",
+          "input": {
+            "text": "Saasify",
+            "font": "Banner3-D"
+          }
+        },
+        {
+          "name": "Georgia11",
+          "input": {
+            "text": "Saasify",
+            "font": "Georgia11"
+          }
+        },
+        {
+          "name": "Roman",
+          "input": {
+            "text": "Saasify",
+            "font": "Roman"
+          }
+        },
+        {
+          "name": "Poison",
+          "input": {
+            "text": "Saasify",
+            "font": "Poison"
+          }
+        },
+        {
+          "name": "Small Poison",
+          "input": {
+            "text": "Saasify",
+            "font": "Small Poison"
+          }
+        },
+        {
+          "name": "Doh",
+          "input": {
+            "text": "Saasify",
+            "font": "Doh"
+          }
+        }
+      ]
+    }
+  ],
+  "saas": {
+    "heading": "Text to **ASCII ART**",
+    "subheading": "Simple API for converting text to hundreds of styles of ASCII art.",
+    "repo": "https://github.com/saasify-sh/saasify/tree/master/examples/typescript/text-to-ascii-art",
+    "logo": "./media/logo.svg",
+    "favicon": "./media/favicon.ico",
+    "theme": {
+      "name": "waves",
+      "backgroundImage": "https://images.unsplash.com/photo-1558777097-28d89959d145?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80",
+      "buttonStyle": "rounded",
+      "color": "#3f72af",
+      "wave": false,
+      "gradientDark": false,
+      "codeBlockDark": true
+    }
+  }
+}

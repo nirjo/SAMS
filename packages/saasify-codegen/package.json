@@ -1,0 +1,48 @@
+{
+  "name": "saasify-codegen",
+  "version": "1.15.9",
+  "description": "Codegen for saasify services.",
+  "author": "Saasify <dev@saasify.sh>",
+  "repository": "saasify-sh/saasify",
+  "license": "MIT",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "codegen",
+    "faas",
+    "saas",
+    "lambda",
+    "serverless",
+    "deploy",
+    "saasify",
+    "fts"
+  ],
+  "scripts": {
+    "build": "microbundle --no-compress --format modern,cjs",
+    "start": "microbundle watch --no-compress --format modern,cjs",
+    "dev": "yarn start",
+    "prepublish": "yarn build",
+    "pretest": "yarn build",
+    "test": "ava -v"
+  },
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "microbundle": "^0.12.0-next.6",
+    "raw.macro": "^0.3.0"
+  },
+  "dependencies": {
+    "indent-string": "^4.0.0",
+    "mustache": "^3.1.0",
+    "qs": "^6.9.0",
+    "stringify-object": "^3.3.0"
+  },
+  "ava": {
+    "failFast": true,
+    "snapshotDir": "./.snapshots"
+  },
+  "gitHead": "c7c6721c98e28d0b1ea455c38276eb668c66b1f9"
+}

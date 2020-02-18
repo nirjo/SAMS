@@ -1,0 +1,9 @@
+{
+  "name": "python-sentiment-analysis",
+  "services": [
+    {
+      "src": "main.py",
+      "immutable": true
+    }
+  ]
+}

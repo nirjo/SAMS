@@ -1,0 +1,60 @@
+{
+  "name": "remove-bg",
+  "description": "Smart image background removal",
+  "services": [
+    {
+      "src": "src/url.ts",
+      "immutable": true,
+      "examples": [
+        {
+          "name": "Person",
+          "input": {
+            "url": "https://raw.githubusercontent.com/saasify-sh/saasify/master/examples/typescript/remove-bg/examples/cc.jpg"
+          }
+        },
+        {
+          "name": "Product",
+          "input": {
+            "url": "https://raw.githubusercontent.com/saasify-sh/saasify/master/examples/typescript/remove-bg/examples/pg.jpg"
+          }
+        },
+        {
+          "name": "Car",
+          "input": {
+            "url": "https://raw.githubusercontent.com/saasify-sh/saasify/master/examples/typescript/remove-bg/examples/jb.jpg"
+          }
+        }
+      ]
+    }
+  ],
+  "pricingPlans": [
+    {
+      "name": "Free",
+      "rateLimit": {
+        "requestsInterval": 86400,
+        "requestsMaxPerInterval": 5
+      }
+    },
+    {
+      "name": "Unlimited",
+      "amount": 999,
+      "requests": {
+        "amount": 50
+      }
+    }
+  ],
+  "env": {
+    "REMOVE_BG_API_KEY": "@remove-bg-api-key"
+  },
+  "saas": {
+    "name": "Remove BG",
+    "repo": "https://github.com/saasify-sh/saasify/tree/master/examples/typescript/remove-bg",
+    "logo": "media/logo.svg",
+    "favicon": "media/favicon.ico",
+    "sections": {
+      "hero": {
+        "image": "https://raw.githubusercontent.com/saasify-sh/saasify/master/examples/typescript/remove-bg/media/splash-0.jpg"
+      }
+    }
+  }
+}

@@ -1,0 +1,387 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$ref": "#/definitions/Config",
+  "definitions": {
+    "Config": {
+      "title": "Config",
+      "type": "object",
+      "properties": {
+        "saasifyVersion": {
+          "title": "saasifyVersion",
+          "default": 1,
+          "oneOf": [{ "type": "number" }, { "type": "string" }]
+        },
+        "version": {
+          "title": "version",
+          "default": "0.1.0",
+          "oneOf": [{ "type": "number" }, { "type": "string" }]
+        },
+        "name": {
+          "type": "string",
+          "title": "name"
+        },
+        "description": {
+          "type": "string",
+          "title": "description"
+        },
+        "alias": {
+          "type": "string",
+          "title": "alias"
+        },
+        "build": {
+          "type": "object",
+          "title": "build",
+          "additionalProperties": true
+        },
+        "env": {
+          "type": "object",
+          "title": "env",
+          "additionalProperties": true
+        },
+        "saas": {
+          "type": "object",
+          "title": "saas",
+          "additionalProperties": true
+        },
+        "openapi": {
+          "title": "openapi",
+          "oneOf": [
+            { "type": "object", "additionalProperties": true },
+            { "type": "string" }
+          ]
+        },
+        "services": {
+          "type": "array",
+          "title": "services",
+          "items": {
+            "$ref": "#/definitions/Service"
+          }
+        },
+        "coupons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Coupon"
+          },
+          "title": "coupons"
+        },
+        "headers": {
+          "type": "object",
+          "title": "headers",
+          "additionalProperties": true
+        },
+        "immutable": {
+          "type": "boolean",
+          "title": "immutable"
+        },
+        "pricingPlans": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 5,
+          "items": {
+            "$ref": "#/definitions/PricingPlan"
+          },
+          "title": "pricingPlans"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Example": {
+      "title": "Example",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "name"
+        },
+        "description": {
+          "type": "string",
+          "title": "description"
+        },
+        "input": {
+          "type": "object",
+          "title": "input"
+        },
+        "inputContentType": {
+          "type": "string",
+          "title": "inputContentType"
+        },
+        "snippet": {
+          "$ref": "#/definitions/Snippet",
+          "title": "snippet"
+        },
+        "additionalProperties": false
+      },
+      "required": ["name", "input"]
+    },
+    "Coupon": {
+      "title": "Coupon",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "name"
+        },
+        "currency": {
+          "type": "string",
+          "title": "currency"
+        },
+        "amount_off": {
+          "type": "number",
+          "title": "amount_off"
+        },
+        "percent_off": {
+          "type": "number",
+          "title": "percent_off"
+        },
+        "duration": {
+          "type": "string",
+          "title": "duration"
+        },
+        "duration_in_months": {
+          "type": "number",
+          "title": "duration_in_months"
+        },
+        "redeem_by": {
+          "type": "string",
+          "title": "redeem_by"
+        },
+        "max_redemptions": {
+          "type": "number",
+          "title": "max_redemptions"
+        },
+        "additionalProperties": false
+      },
+      "required": ["duration"]
+    },
+    "Service": {
+      "title": "Service",
+      "type": "object",
+      "properties": {
+        "src": {
+          "type": "string",
+          "title": "src"
+        },
+        "name": {
+          "type": "string",
+          "title": "name"
+        },
+        "path": {
+          "type": "string",
+          "title": "path"
+        },
+        "timeout": {
+          "type": "number",
+          "title": "timeout"
+        },
+        "examples": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Example"
+          },
+          "title": "examples"
+        },
+        "config": {
+          "type": "object",
+          "title": "config",
+          "additionalProperties": true
+        },
+        "GET": {
+          "type": "boolean",
+          "title": "GET"
+        },
+        "POST": {
+          "type": "boolean",
+          "title": "POST"
+        },
+        "headers": {
+          "type": "object",
+          "title": "headers",
+          "additionalProperties": true
+        },
+        "immutable": {
+          "type": "boolean",
+          "title": "immutable"
+        },
+        "reportUsage": {
+          "type": "boolean",
+          "title": "reportUsage"
+        },
+        "rateLimit": {
+          "oneOf": [{ "$ref": "#/definitions/RateLimit" }, { "type": "null" }],
+          "title": "rateLimit"
+        },
+        "pricingPlanConfig": {
+          "type": "object",
+          "title": "pricingPlanConfig",
+          "patternProperties": {
+            "^.*$": { "$ref": "#/definitions/PricingPlanServiceConfig" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "RateLimit": {
+      "title": "RateLimit",
+      "type": "object",
+      "properties": {
+        "requests": {
+          "type": "boolean",
+          "title": "enabled",
+          "default": true
+        },
+        "requestsInterval": {
+          "title": "requestsInterval",
+          "default": "1h",
+          "oneOf": [{ "type": "number" }, { "type": "string" }]
+        },
+        "requestsMaxPerInterval": {
+          "type": "number",
+          "title": "requestsMaxPerInterval",
+          "default": 1000
+        }
+      },
+      "additionalProperties": false
+    },
+    "Snippet": {
+      "title": "Snippet",
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "label"
+        },
+        "language": {
+          "type": "string",
+          "title": "language"
+        },
+        "code": {
+          "type": "string",
+          "title": "code"
+        },
+        "exclusive": {
+          "type": "boolean",
+          "title": "exclusive",
+          "default": true
+        }
+      },
+      "additionalProperties": false,
+      "required": ["label", "language", "code"]
+    },
+    "PricingPlan": {
+      "title": "PricingPlan",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "name"
+        },
+        "slug": {
+          "type": "string",
+          "title": "slug"
+        },
+        "desc": {
+          "type": "string",
+          "title": "desc"
+        },
+        "auth": {
+          "type": "boolean",
+          "title": "auth"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "features"
+        },
+        "amount": {
+          "type": "number",
+          "title": "amount",
+          "default": 0,
+          "minimum": 0
+        },
+        "requests": {
+          "$ref": "#/definitions/PricingPlanMeteredConfig",
+          "title": "requests"
+        },
+        "rateLimit": {
+          "oneOf": [{ "$ref": "#/definitions/RateLimit" }, { "type": "null" }],
+          "title": "rateLimit"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["name"]
+    },
+    "PricingPlanMeteredConfig": {
+      "title": "PricingPlanMeteredConfig",
+      "type": "object",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "title": "amount",
+          "minimum": 0
+        },
+        "billingScheme": {
+          "type": "string",
+          "title": "billingScheme",
+          "enum": ["per_unit", "tiered"]
+        },
+        "tiersMode": {
+          "type": "string",
+          "title": "teirsMode",
+          "enum": ["graduated", "volume"]
+        },
+        "tiers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PricingPlanTier"
+          },
+          "title": "tiers"
+        }
+      },
+      "additionalProperties": false
+    },
+    "PricingPlanTier": {
+      "title": "PricingPlanTier",
+      "type": "object",
+      "properties": {
+        "unitAmount": {
+          "type": "number",
+          "title": "unitAmount",
+          "minimum": 0
+        },
+        "flatAmount": {
+          "type": "number",
+          "title": "flatAmount",
+          "minimum": 0
+        },
+        "upTo": {
+          "type": "string",
+          "title": "upTo"
+        }
+      },
+      "additionalProperties": false,
+      "required": ["upTo"]
+    },
+    "PricingPlanServiceConfig": {
+      "title": "PricingPlanServiceConfig",
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "title": "enabled"
+        },
+        "reportUsage": {
+          "type": "boolean",
+          "title": "reportUsage"
+        },
+        "rateLimit": {
+          "oneOf": [{ "$ref": "#/definitions/RateLimit" }, { "type": "null" }],
+          "title": "rateLimit"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
