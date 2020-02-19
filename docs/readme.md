@@ -6,7 +6,7 @@
 
 <h3 align="center" style="margin-top: .6rem">
 
- PUSAMS <small>-Students’ Academic Activity Management System </small>
+ PUSAMS <small>- pusams Students’ Academic Activity Management System </small>
 </h3>
 
 ---
